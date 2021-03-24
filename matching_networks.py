@@ -195,6 +195,7 @@ class MatchingNetwork(nn.Module):
 
         # use fce?
         if self.fce:
+            print(output.shape)
             outputs = self.lstm(output)
 
         # get similarities between support set embeddings and target

@@ -30,7 +30,7 @@ data = OmniglotNShotDataset(batch_size=batch_size, classes_per_set=classes_per_s
                             samples_per_class=samples_per_class, seed=2017, shuffle=True, use_cache=False)
 obj_oneShotBuilder = OmniglotBuilder(data)
 obj_oneShotBuilder.build_experiment(batch_size=batch_size, num_channels=1, lr=1e-3, image_size=28, classes_per_set=20,
-                                    samples_per_class=1, keep_prob=0.0, fce=True, optim="adam", weight_decay=0,
+                                    samples_per_class=1, keep_prob=0.0, fce=fce, optim="adam", weight_decay=0,
                                     use_cuda=True)
 
 with tqdm.tqdm(total=total_train_batches) as pbar_e:
